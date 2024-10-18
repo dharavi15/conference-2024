@@ -1,0 +1,128 @@
+body {
+    font-family:'Poppins', sans-serif;;
+    margin: 0%;
+    padding: 0;
+    background-color: #f4f4f4;
+	box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    margin-top: 5%;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.speakers-section
+{
+    margin-top: 5%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.speaker {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.speaker-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.speaker:hover .speaker-photo {
+    filter: grayscale(50%);
+}
+
+.speaker-info {
+    padding: 15px;
+}
+
+.speaker-info h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #0073e6;
+}
+
+.speaker-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    /* Additional adjustments for very small screens */
+    header {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    .speakers-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px;
+        margin-top : 250px;
+    }
+
+    .speaker-photo {
+        height: 250px; /* Further reduce image height for small screens */
+        margin-top : 250px;
+    }
+
+    .speaker-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .speaker-info p {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 5px 0;
+        font-size: 0.8rem;
+    }
+}

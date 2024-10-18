@@ -1,0 +1,78 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; 
+    padding: 10px 0;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+  }
+  
+  /* Navbar brand (Presented by Göteborg Stad)  */
+  .navbar-brand  {
+    text-decoration: none;
+    color: #cac6c6; ;
+  }
+  
+  /* Navbar items aligned right */
+  .navbar-nav {
+    display: flex;
+    gap: 15px; 
+  }
+  
+  .navbar-nav .nav-item {
+    list-style: none;
+  }
+  
+  /* Style the nav links */
+  .navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #cac6c6; 
+  }
+
+/* Style the active link */
+.navbar-nav .nav-link.active {
+    color: #f3f1f1; 
+    opacity: 1;
+}
+
+.navbar-nav .nav-link:not(.active) {
+    opacity: 0.5;
+}
+  /* Mobile Styles (max-width: 600px) */
+@media (max-width: 600px) {
+  .navbar .container {
+      flex-direction: column; /* Stack the brand and nav items vertically */
+      align-items: flex-start;
+  }
+
+  .navbar-brand {
+      margin-bottom: 10px; /* Add space between brand and nav items */
+      font-size: 1.5rem; /* Larger font size for brand on mobile */
+  }
+
+  /* Stack navbar items vertically */
+  .navbar-nav {
+      flex-direction: column;
+      gap: 10px; /* Less gap between items */
+      width: 100%; /* Full width for nav items */
+  }
+
+  .navbar-nav .nav-link {
+      font-size: 1.2rem; /* Make the nav links larger for touch screens */
+      width: 100%; /* Make links take full width */
+      padding: 10px 0;
+  }
+}

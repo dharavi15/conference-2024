@@ -1,0 +1,169 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black; 
+}
+/* Background image with a delayed fade-in animation */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(backgroundImg.jpg); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); 
+    opacity: 0;
+    animation: fadeInBg 0.5s ease forwards 0.25s; /* Background fades in after 1 second */
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    animation: fadeInText 1s ease forwards; /* Text fades in immediately */
+}
+
+.register-here-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-top: 10px;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInText 1s ease forwards;
+}
+
+.register-here-btn:hover {
+    background-color: #0056b3;
+}
+
+h1, h2, h3 {
+    font-weight: 700; 
+}
+
+.header-info {
+    display: grid; 
+    grid-template-columns: auto auto auto; /* Three columns for three h3 elements */
+    gap: 10px; /* Adds space between the elements */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically */
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+/* Keyframes for text fade-in animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for background fade-in animation (with delay) */
+@keyframes fadeInBg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #f5efef;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* Close button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: rgb(197, 60, 60);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Show modal when targeted */
+#registration-modal:target {
+    display: block; /* Show the modal */
+}
+
+/* Hide modal when close button is clicked */
+#registration-modal:target .modal {
+    display: block; /* Show the modal */
+}
+/* Responsive Design - Mobile Styles */
+/* For screens with a max width of 600px (mobile devices) */
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 10px; /* Push body content below the header */
+    }
+    
+    h1 {
+        font-size: 50px; /* Smaller font size for mobile */
+        margin-top: 250px;
+
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .register-here-btn {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .header-info {
+        grid-template-columns: 1fr; /* Stacks the h3 elements in one column */
+        gap: 5px;
+    }
+
+    .modal-content {
+        width: 80%; /* Full-screen modal on mobile */
+    }
+
+    .modal-content p {
+        font-size: 1rem; /* Smaller text in the modal */
+    }
+}
