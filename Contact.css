@@ -1,0 +1,212 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    margin-top: 80px; /* Offset for fixed navbar */
+    background-color: #ffffff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-details, .contact-map {
+    flex: 1 1 45%; /* Responsive: Each section takes about half the width */
+    margin: 20px;
+}
+
+.contact-details h3, .contact-map h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.contact-details ul li {
+    margin-bottom: 10px;
+}
+
+.contact-details ul li a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.contact-details ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1 1 25%; /* Each column takes 25% of the width */
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-col ul li a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1); /* Enlarges the icon on hover */
+}
+
+.social-links img {
+    width: 48px;
+    height: 48px;
+}
+/* Mobile Screens (max-width: 600px) */
+@media (max-width: 600px) {
+
+    /* Adjust Contact Section */
+    .contact-section {
+        padding: 40px 15px; /* Reduce padding for mobile */
+        margin-top: 60px; /* Adjust for mobile */
+    }
+
+    .contact-container h2 {
+        font-size: 28px; /* Smaller heading */
+    }
+
+    .contact-container p {
+        font-size: 16px; /* Smaller paragraph text */
+        margin-bottom: 30px;
+    }
+
+    /* Stack contact details and map vertically */
+    .contact-info {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: center;
+    }
+
+    .contact-details, .contact-map {
+        flex: 1 1 100%; /* Full width for each section */
+        margin: 10px 0; /* Reduce margin */
+    }
+
+    .contact-details ul li {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .contact-details ul li a {
+        font-size: 16px; /* Adjust font size for links */
+    }
+
+    /* Footer Adjustments */
+    .footer {
+        
+        margin-top: 10px;
+    }
+
+    .footer h1, .footer h4 {
+        font-size: 18px; /* Smaller heading size */
+    }
+
+    .footer .row {
+        flex-direction: column; /* Stack footer columns vertically */
+        align-items: center;
+    }
+
+    .footer-col {
+        flex: 1 1 100%; /* Full width for each column */
+        margin-bottom: 20px; /* Space between columns */
+    }
+
+    .footer-col ul li {
+        font-size: 14px; /* Smaller font size for list items */
+    }
+
+    /* Social Links Adjustments */
+    .social-links {
+        gap: 10px; /* Reduce gap between icons */
+    }
+
+    .social-links img {
+        width: 40px;
+        height: 40px; /* Smaller icons for mobile */
+    }
+}
+

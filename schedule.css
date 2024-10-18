@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #151515;
+    margin-top: 8%;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px;
+    margin-bottom: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.schedule h2 {
+    text-align: center;
+}
+
+.day-schedule {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Flexbox inside each day-schedule to ensure the content grows */
+    justify-content: space-between; /* Ensures even spacing within the box */
+    height: 100%; /* This ensures the height of each box fills the column */
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.time {
+    font-weight: bold;
+    color: #3498db;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #e74c3c;
+}
+
+.description {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Mobile Screens (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    header {
+        margin-bottom: 30px;
+        margin-top: 30px; /* Adjust spacing for mobile */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+        margin-top: 10%; /* Adjust margin */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Adjust subheading font size */
+        margin-bottom: 8px;
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr; /* Single-column layout on mobile */
+        gap: 15px; /* Reduce gap between schedule items */
+        margin-top: 150px; /* Remove margins on mobile */
+    }
+
+    .day-schedule {
+        padding: 15px; /* Reduce padding for mobile */
+        border-radius: 8px;
+    }
+
+    .time {
+        font-size: 1rem; /* Adjust time font size for mobile */
+    }
+
+    .title {
+        font-size: 1.1rem; /* Adjust title size for readability */
+    }
+
+    .description {
+        font-size: 0.9rem; /* Adjust description size */
+    }
+
+    footer {
+        padding: 15px 0; /* Adjust footer padding */
+        font-size: 0.9rem; /* Smaller text in the footer for mobile */
+    }
+}
+
+

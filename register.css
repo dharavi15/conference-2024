@@ -1,0 +1,40 @@
+/* Button styling */
+.register-here-btn {
+    background-color: #007BFF;
+    color: rgb(239, 102, 102);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.register-here-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none; /* Prevent click */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* When the form is valid, enable the button */
+form:valid .submit-btn {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    pointer-events: auto; /* Enable click */
+    text-decoration: none;
+}
+
+form:valid .submit-btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}

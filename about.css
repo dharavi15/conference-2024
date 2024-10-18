@@ -1,0 +1,97 @@
+body {
+  font-family: 'Poppins', sans-serif; 
+  background-color: #f0f0f0; 
+  margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/* Flexbox Container */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjusted for dynamic height */
+  padding: 20px; /* Padding for mobile responsiveness */
+}
+
+/* Main Container */
+.about-container {
+  max-width: 900px; /* Restrict the max width of the content */
+  width: 100%;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners for the content box */
+  padding: 40px; /* Padding inside the container */
+  margin: 20px; /* Margin around the container */
+}
+
+/* About Section Styling */
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #151515; 
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.about-highlights h3 {
+  font-size: 2rem;
+  color: #151515; /* Consistent header color */
+  margin-bottom: 15px;
+}
+
+.about-highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-highlights ul li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333; /* Dark background for the footer */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center the text */
+  padding: 20px 0; /* Padding for spacing */
+  position: relative; /* Allow for positioning */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer-container {
+  max-width: 900px; /* Max width to match content */
+  margin: 0 auto; /* Center the container */
+}
+
+.footer p {
+  margin: 10px 0; /* Margin for spacing */
+}
+/* Responsive Styling */
+
+/* Mobile-first */
+@media (max-width: 600px) {
+  .about-content h2 {
+    font-size: 1.8rem;
+    margin-top: 250px; /* Smaller font size for mobile */
+  }
+
+  .about-content p, .about-highlights ul li {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .about-container {
+    padding: 20px; /* Less padding on mobile */
+  }
+
+  .footer {
+    margin-top: 100px;
+  }
+}
+
+
