@@ -110,14 +110,14 @@ footer {
     }
 
     .speakers-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 2fr; 
         gap: 10px;
-        margin-top : 250px;
+        margin-top : 0px;
     }
 
     .speaker-photo {
-        height: 250px; 
         margin-top : 250px;
+        height:auto
     }
 
     .speaker-info h2 {
