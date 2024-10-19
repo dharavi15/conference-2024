@@ -6,26 +6,24 @@ body {
 	box-sizing: border-box;
 }
 
-/* Flexbox Container */
 .about-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto; /* Adjusted for dynamic height */
-  padding: 20px; /* Padding for mobile responsiveness */
+  height: auto; 
+  padding: 20px; 
 }
 
 /* Main Container */
 .about-container {
-  max-width: 900px; /* Restrict the max width of the content */
+  max-width: 900px; 
   width: 100%;
   text-align: center;
-  border-radius: 8px; /* Rounded corners for the content box */
-  padding: 40px; /* Padding inside the container */
-  margin: 20px; /* Margin around the container */
+  border-radius: 8px; 
+  padding: 40px;
+  margin: 20px; 
 }
 
-/* About Section Styling */
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -39,7 +37,7 @@ body {
 
 .about-highlights h3 {
   font-size: 2rem;
-  color: #151515; /* Consistent header color */
+  color: #151515; 
   margin-bottom: 15px;
 }
 
@@ -53,40 +51,38 @@ body {
   margin-bottom: 15px;
 }
 
-/* Footer Styling */
+
 .footer {
-  background-color: #333; /* Dark background for the footer */
-  color: white; /* White text for contrast */
-  text-align: center; /* Center the text */
-  padding: 20px 0; /* Padding for spacing */
-  position: relative; /* Allow for positioning */
-  bottom: 0; /* Stick to the bottom */
-  width: 100%; /* Full width */
+  background-color: #333; 
+  color: white; 
+  text-align: center; 
+  padding: 20px 0; 
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
 }
 
 .footer-container {
-  max-width: 900px; /* Max width to match content */
-  margin: 0 auto; /* Center the container */
+  max-width: 900px; 
+  margin: 0 auto; 
 }
 
 .footer p {
-  margin: 10px 0; /* Margin for spacing */
+  margin: 10px 0; 
 }
-/* Responsive Styling */
 
-/* Mobile-first */
 @media (max-width: 600px) {
   .about-content h2 {
     font-size: 1.8rem;
-    margin-top: 250px; /* Smaller font size for mobile */
+    margin-top: 250px; 
   }
 
   .about-content p, .about-highlights ul li {
-    font-size: 1rem; /* Adjust text size */
+    font-size: 1rem;
   }
 
   .about-container {
-    padding: 20px; /* Less padding on mobile */
+    padding: 20px; 
   }
 
   .footer {
