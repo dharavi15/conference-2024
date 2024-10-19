@@ -6,7 +6,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: black; 
 }
-/* Background image with a delayed fade-in animation */
+
 body::before {
     content: "";
     position: absolute;
@@ -19,15 +19,15 @@ body::before {
     background-position: center;
     filter: blur(2px); 
     opacity: 0;
-    animation: fadeInBg 0.5s ease forwards 0.25s; /* Background fades in after 1 second */
+    animation: fadeInBg 0.5s ease forwards 0.25s; 
 }
 
-header {
+.web {
     position: relative;
     text-align: center;
     color: white;
     opacity: 0;
-    animation: fadeInText 1s ease forwards; /* Text fades in immediately */
+    animation: fadeInText 1s ease forwards;
 }
 
 .register-here-btn {
@@ -51,16 +51,19 @@ h1, h2, h3 {
     font-weight: 700; 
 }
 
+h4{
+    margin-top: 5px;
+    font-size: 30px;
+}
 .header-info {
     display: grid; 
-    grid-template-columns: auto auto auto; /* Three columns for three h3 elements */
-    gap: 10px; /* Adds space between the elements */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Align items vertically */
-    margin-top: 10px; /* Add margin for spacing */
+    grid-template-columns: auto auto auto; 
+    gap: 10px; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 10px; 
 }
 
-/* Keyframes for text fade-in animation */
 @keyframes fadeInText {
     0% {
         opacity: 0;
@@ -70,7 +73,7 @@ h1, h2, h3 {
     }
 }
 
-/* Keyframes for background fade-in animation (with delay) */
+
 @keyframes fadeInBg {
     0% {
         opacity: 0;
@@ -81,27 +84,25 @@ h1, h2, h3 {
 }
 
 .modal {
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Sit on top */
+    position: fixed; 
+    z-index: 2;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
-/* Modal content */
 .modal-content {
     background-color: #f5efef;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
-    border-radius: 10px; /* Optional: adds rounded corners */
+    width: 40%; 
+    border-radius: 10px; 
 }
 
-/* Close button */
 .close-button {
     color: #aaa;
     float: right;
@@ -117,25 +118,18 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-/* Show modal when targeted */
-#registration-modal:target {
-    display: block; /* Show the modal */
+#registration-modal:target .modal {
+    display: block; 
 }
 
-/* Hide modal when close button is clicked */
-#registration-modal:target .modal {
-    display: block; /* Show the modal */
-}
-/* Responsive Design - Mobile Styles */
-/* For screens with a max width of 600px (mobile devices) */
 @media (max-width: 600px) {
 
     body {
-        padding-top: 10px; /* Push body content below the header */
+        padding-top: 10px; 
     }
-    
+
     h1 {
-        font-size: 50px; /* Smaller font size for mobile */
+        font-size: 50px; 
         margin-top: 250px;
 
     }
@@ -155,15 +149,15 @@ h1, h2, h3 {
     }
 
     .header-info {
-        grid-template-columns: 1fr; /* Stacks the h3 elements in one column */
+        grid-template-columns: 1fr; 
         gap: 5px;
     }
 
     .modal-content {
-        width: 80%; /* Full-screen modal on mobile */
+        width: 80%; 
     }
 
     .modal-content p {
-        font-size: 1rem; /* Smaller text in the modal */
+        font-size: 1rem; 
     }
 }
